@@ -120,7 +120,7 @@ Python and Boto3 are used to inspect AWS infrastructure and retrieve operational
 - Resource filtering
 - Structured AWS API response inspection
 
-![Boto3 Lambda Inspection](screenshots/07-lambda-boto3.png)
+![Lambda Boto3](screenshots/07-lambda-boto3.png)
 
 ---
 
@@ -200,20 +200,14 @@ serverless-aws-infrastructure-automation/
 ## 🚀 Quick Start
 
 ```powershell
-# Move into the Terraform directory
-cd terraform
-
-# Initialize Terraform providers
-terraform init
+# Move to the project root
+cd serverless-aws-infrastructure-automation
 
 # Validate the Terraform configuration
-terraform validate
-
-# Preview the infrastructure changes
-terraform plan
+.\scripts\validate.ps1
 
 # Deploy the AWS infrastructure
-terraform apply
+.\scripts\deploy.ps1
 
 ## 📸 Project Screenshots
 
@@ -227,7 +221,7 @@ terraform apply
 
 ### Boto3 Infrastructure Inspection
 
-![Boto3 Lambda Inspection](screenshots/07-lambda-boto3.png)
+![Lambda Boto3](screenshots/07-lambda-boto3.png)
 
 ### Pytest Validation
 
