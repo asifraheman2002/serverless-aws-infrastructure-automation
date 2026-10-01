@@ -96,7 +96,7 @@ terraform validate
 terraform plan
       ↓
 terraform apply
-
+```
 ---
 
 ## 🤖 Python & Boto3 Automation
