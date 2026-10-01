@@ -195,6 +195,7 @@ serverless-aws-infrastructure-automation/
 │
 ├── .gitignore
 └── LICENSE
+```
 ---
 
 ## 🚀 Quick Start
@@ -208,26 +209,54 @@ cd serverless-aws-infrastructure-automation
 
 # Deploy the AWS infrastructure
 .\scripts\deploy.ps1
-
+```
+---
 ## 📸 Project Screenshots
 
-### Terraform Deployment
+### 01. AWS Serverless Architecture
+![AWS Serverless Architecture](screenshots/01-architecture.png)
 
+### 02. Terraform Project Structure
+![Terraform Project Structure](screenshots/02-terraform-structure.png)
+
+### 03. Terraform Plan
+![Terraform Plan](screenshots/03-terraform-plan.png)
+
+### 04. Terraform Apply
 ![Terraform Apply](screenshots/04-terraform-apply.png)
 
-### AWS Deployment
-
+### 05. AWS Deployment
 ![AWS Deployment](screenshots/05-aws-deployment.png)
 
-### Boto3 Infrastructure Inspection
+### 06. Terraform Validation
+![Terraform Validation](screenshots/06-aws-validate.png)
 
+### 07. Lambda & Boto3 Inspection
 ![Lambda Boto3](screenshots/07-lambda-boto3.png)
 
-### Pytest Validation
+### 08. DynamoDB & Boto3 Inspection
+![DynamoDB Boto3](screenshots/08-dynamodb-boto3.png)
 
+### 09. S3 & Boto3 Inspection
+![S3 Boto3](screenshots/09-s3-boto3.png)
+
+### 10. API Gateway Configuration
+![API Gateway](screenshots/10-api-gateway.png)
+
+### 11. CloudWatch Lambda Logs
+![CloudWatch Logs](screenshots/11-cloudwatch-logs.png)
+
+### 12. CloudTrail Configuration & Events
+![CloudTrail](screenshots/12-cloudtrail.png)
+
+### 13. IAM Roles & Policies
+![IAM](screenshots/13-iam.png)
+
+### 14. Pytest Infrastructure Validation
 ![Pytest Results](screenshots/14-pytest-results.png)
 
-[View all project screenshots](screenshots/)
+### 15. Working Frontend Application
+![Frontend Working](screenshots/15-frontend-working.png)
 ---
 
 ## 📌 Key Engineering Concepts
