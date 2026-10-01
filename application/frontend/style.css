@@ -1,0 +1,33 @@
+body{
+    background:#f4f6f9;
+}
+
+.navbar{
+    background:#232f3e !important;
+}
+
+.card{
+    border-radius:15px;
+}
+
+.card-header{
+    font-weight:bold;
+}
+
+.btn{
+    border-radius:8px;
+    font-weight:600;
+}
+
+.table{
+    margin-bottom:0;
+}
+
+footer{
+    font-size:14px;
+}
+
+#EmployeeSaved{
+    color:green;
+    font-weight:bold;
+}

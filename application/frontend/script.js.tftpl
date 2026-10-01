@@ -1,0 +1,112 @@
+// API endpoint generated from Terraform
+const API_ENDPOINT = "${api_endpoint}";
+
+const employeeId = document.getElementById("employeeid");
+const employeeName = document.getElementById("name");
+const department = document.getElementById("department");
+const salary = document.getElementById("salary");
+const message = document.getElementById("EmployeeSaved");
+
+document
+    .getElementById("saveemployee")
+    .addEventListener("click", saveEmployee);
+
+document
+    .getElementById("getemployees")
+    .addEventListener("click", getEmployees);
+
+async function saveEmployee() {
+
+    if (
+        employeeId.value.trim() === "" ||
+        employeeName.value.trim() === "" ||
+        department.value.trim() === "" ||
+        salary.value.trim() === ""
+    ) {
+        message.style.color = "red";
+        message.innerText = "Please fill all fields.";
+        return;
+    }
+
+    const payload = {
+        employeeid: employeeId.value.trim(),
+        name: employeeName.value.trim(),
+        department: department.value.trim(),
+        salary: salary.value.trim()
+    };
+
+    try {
+
+        const response = await fetch(API_ENDPOINT, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(payload)
+        });
+
+        if (!response.ok) {
+            throw new Error("Request Failed");
+        }
+
+        message.style.color = "green";
+        message.innerText = "Employee saved successfully.";
+
+        clearForm();
+
+        getEmployees();
+
+    } catch (error) {
+
+        message.style.color = "red";
+        message.innerText = "Unable to save employee.";
+
+        console.error(error);
+
+    }
+
+}
+
+async function getEmployees() {
+
+    try {
+
+        const response = await fetch(API_ENDPOINT);
+
+        const data = await response.json();
+
+        const tableBody = document.querySelector("#EmployeeTable tbody");
+
+        tableBody.innerHTML = "";
+
+        data.forEach(employee => {
+
+            tableBody.innerHTML += `
+                <tr>
+                    <td>$${employee.employeeId}</td>
+                    <td>$${employee.name}</td>
+                    <td>$${employee.department}</td>
+                    <td>$${employee.salary}</td>
+                </tr>
+            `;
+
+        });
+
+    } catch (error) {
+
+        alert("Unable to retrieve employee data.");
+
+        console.error(error);
+
+    }
+
+}
+
+function clearForm() {
+
+    employeeId.value = "";
+    employeeName.value = "";
+    department.value = "";
+    salary.value = "";
+
+}

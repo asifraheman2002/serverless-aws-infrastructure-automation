@@ -1,0 +1,49 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# Pytest
+.pytest_cache/
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+automation/logs/*
+!automation/logs/.gitkeep
+
+# Generated reports
+automation/reports/*
+!automation/reports/.gitkeep
+
+# Terraform generated files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfvars
+*.tfvars.json
+*.zip
+*.gz
+
+# Temporary AWS files
+cloudtrail-readable.json
+terraform/frontend-policy.json
+terraform/response.json
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
