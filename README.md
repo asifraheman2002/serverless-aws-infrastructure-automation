@@ -177,21 +177,48 @@ serverless-aws-infrastructure-automation/
 │
 ├── application/
 │   ├── backend/
+│   │   ├── getEmployees.py
+│   │   └── insertEmployeeData.py
+│   │
 │   └── frontend/
+│       ├── index.html
+│       ├── script.js.tftpl
+│       └── style.css
 │
 ├── automation/
 │   ├── config/
 │   ├── logs/
 │   ├── reports/
 │   └── src/
+│       └── inspect_infrastructure.py
 │
 ├── scripts/
+│   ├── deploy.ps1
+│   ├── destroy.ps1
+│   └── validate.ps1
 │
 ├── screenshots/
 │
 ├── terraform/
+│   ├── api_gateway.tf
+│   ├── cloudtrail.tf
+│   ├── cloudwatch.tf
+│   ├── dynamodb.tf
+│   ├── frontend.tf
+│   ├── iam.tf
+│   ├── lambda.tf
+│   ├── provider.tf
+│   ├── s3.tf
+│   └── variables.tf
 │
 ├── tests/
+│   ├── test_api.py
+│   ├── test_dynamodb.py
+│   ├── test_lambda.py
+│   └── test_s3.py
+│
+├── docs/
+│   └── AWS-Troubleshooting-Case-Study.pdf
 │
 ├── .gitignore
 └── LICENSE
